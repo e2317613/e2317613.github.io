@@ -1,0 +1,235 @@
+@charset "utf-8";
+
+* {
+    /* フォントを指定するプロパティ。serifは明朝体 */
+    font-family: メイリオ, "sans-serif", serif;
+}
+
+body {
+    /* 文字サイズを変更するプロパティ */
+    font-size: 16px;
+}
+
+
+
+
+h1 {
+    background-color:#fff4f9;
+    text-align: justify;
+    text-align-last: justify;
+
+
+
+}
+
+
+
+
+ul { line-height: 1rem;
+    /* 箇条書きの行頭番号を指定するプロパティ */
+    /* list-style: none; */
+    list-style: circle;
+    line-height: 1rem
+
+
+}
+
+table {
+    /* 上から時計回りで指定 */
+    /* 前や後ろにあるタグとのスペースの距離が指定できる */
+    margin: 0 0 0 24px;
+
+
+    /* 二つの場合は上下になる */
+    padding: 2px 2px;
+
+
+    border: 3px double #fffff9;
+}
+
+
+
+th {
+    border: 1px solid moccasin;
+
+    /* 背景に色付ける */
+    background-color: #f2ffe5;
+
+}
+
+td {
+    border: 1px solid moccasin;
+    border-radius: 5px 5px 5px 5px;
+
+    /* 角を丸める */
+    /* 左上、右上、右下、左下＝時計回りの順番で丸める場所を指定できる */
+
+
+}
+
+/* 同回想の偶数番目を指定する疑似クラス */
+tr:nth-child(even){
+    background-color: lavenderblush;
+}
+
+/* 奇数の場合 */
+tr:nth-child(odd){
+    background-color: lemonchiffon;
+}
+
+
+/* An+Bのような関数気泡で位置指定する疑似クラス */
+tr:nth-child(4n+1){
+    background-color:honeydew;
+    
+}
+
+
+/* 同じ階層内での最初の要素 */
+tr:first-child{
+    font-size: 1.5em;
+
+}
+
+ul:last-child{
+    color: tomato;
+}
+
+/* 最後の要素 */
+tr:last-child{
+    font-size: 1.2em;
+
+}
+
+
+
+
+dd::first-letter {
+    font-size: 2em;
+}
+
+
+
+
+
+
+
+/* 子孫結合子 */
+/* セクションタグの中の子要素を指定できる */
+section h2  {
+    color: midnightblue;
+}
+
+
+/* 子結合子 */
+div>dl>dd {
+    text-align: center;
+}
+
+
+
+
+h3~h4 {
+    color: cadetblue;
+}
+
+
+
+/* 訪問済みのリンク */
+a:visited {
+    color: olive;
+}
+
+/* 未訪問のリンク */
+a:link {
+    color: steelblue;
+}
+
+
+a:hover {
+    font-size: 1.5em;
+}
+
+ul {
+    /* 箇条書きの行頭番号を指定するプロパティ */
+    /* list-style: none; */
+    list-style:circle ;
+    
+
+}
+
+/* aタグ以外でも使える */
+dt:hover{
+    border: 3px solid lavenderblush ;
+}
+
+.l{
+    color: darkblue;
+}
+
+
+#result{
+    color: tomato
+    ;
+    font-size: 5em;
+}
+#test-p-1{
+    color: darkgreen;
+}
+.test-p-2{
+    color: darkcyan;
+}
+.w{
+    color: darkorange;
+}
+/* #n{
+    color: blueviolet;
+} */
+
+
+
+
+/* ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー */
+/* classで名前つけたときはドットで表示 */
+
+
+
+
+.containerb{
+    display: grid;
+    grid-template-columns:1fr 1fr;
+    grid-template-areas: 
+    "header-A header-A"
+    "aside-A main-A"
+    "footer-A footer-A";
+
+    column-gap: 1em;
+    row-gap: 2em;
+
+
+    /* pxは具体的な数字している。frは比率！ */
+    grid-template-rows: 200px 2fr 50px;
+}
+
+.headerb{
+    background-color: mistyrose
+    ;
+    grid-area: header-A;
+}
+
+.mainb{
+    background-color: aliceblue;
+    grid-area: main-A;
+}
+
+.asideb{
+    background-color: bisque;
+    grid-area: aside-A;
+}
+
+
+.footerb{
+    background-color: floralwhite;
+    grid-area: footer-A;
+}
+
